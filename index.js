@@ -7,7 +7,7 @@ const hourInput = document.getElementById('hourInput')
 const minuteInput = document.getElementById('minuteInput')
 const secondInput = document.getElementById('secondInput')
 
-let times = 0
+let timeInSecond = 0
 let interval = null
 
 formTimer.addEventListener('submit', e => {
@@ -17,33 +17,31 @@ formTimer.addEventListener('submit', e => {
   let minute = Number(minuteInput.value) * 60
   let second = Number(secondInput.value)
   if (currentStatus === 'Start') {
-    times = hour + minute + second
+    timeInSecond = hour + minute + second
     buttonTimer.style.backgroundColor = '#ff0000'
     buttonTimer.innerHTML = 'Stop'
-    console.log(times, 'here')
+    displayTime(timeInSecond)
     interval = setInterval(countDown, 1000)
   } else {
     stopTimer()
   }
 })
 
-function displayTime() {
+function displayTime(times) {
   let hours = Math.floor(times / 3600)
   let minutes = Math.floor((times / 60) % 60)
   let seconds = times % 60
-  // console.log(hours, minutes, seconds)
-  // console.log(hoursElement.innerHTML)
   hoursElement.innerHTML = addZeroForBelowTen(hours)
   minutesElement.innerHTML = addZeroForBelowTen(minutes)
   secondsElement.innerHTML = addZeroForBelowTen(seconds)
 }
 
 function countDown() {
-  if (times <= 0) {
+  if (timeInSecond <= 0) {
     stopTimer()
   } else {
-    times--
-    displayTime()
+    timeInSecond--
+    displayTime(timeInSecond)
   }
 }
 
@@ -60,5 +58,3 @@ function stopTimer() {
 function addZeroForBelowTen(numbers) {
   return numbers < 10 ? `0${numbers}` : numbers
 }
-
-// countDown()
