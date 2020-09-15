@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  padding: 4px;
+}
+
+.title {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer {
+  width: 50%;
+  margin: 8px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.timer-number {
+  text-align: center;
+  margin: 24px;
+}
+
+.timer-number .number {
+  font-size: 100px;
+}
+
+.timer-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-control form {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.timer-control button {
+  background-color: #2df522;
+  width: 100%;
+}
+
+.timer-control input {
+  width: 120px;
+}

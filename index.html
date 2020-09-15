@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <title>Timer</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Timer ⏰</h1>
+    </header>
+    <main>
+      <div class="timer">
+        <div class="timer-number">
+          <p class="number" id="hours">00</p>
+        </div>
+        <div class="timer-number">
+          <p class="number">:</p>
+        </div>
+        <div class="timer-number">
+          <p class="number" id="minutes">00</p>
+        </div>
+        <div class="timer-number">
+          <p class="number">:</p>
+        </div>
+        <div class="timer-number">
+          <p class="number" id="seconds">00</p>
+        </div>
+      </div>
+      <div class="timer-control">
+        <form>
+          <div>
+            <input
+              type="number"
+              id="hourInput"
+              min="0"
+              placeholder="hour"
+              value="0"
+            />
+            <input
+              type="number"
+              id="minuteInput"
+              min="0"
+              placeholder="minute"
+              value="0"
+            />
+            <input
+              type="number"
+              id="secondInput"
+              min="0"
+              placeholder="second"
+              value="0"
+            />
+          </div>
+          <button>Start</button>
+        </form>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
